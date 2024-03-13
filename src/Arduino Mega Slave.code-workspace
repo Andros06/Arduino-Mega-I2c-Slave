@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../../Arduino Mega Slave"
+		},
+		{
+			"name": "Arduino Mega I2c Slave",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}
