@@ -4,10 +4,7 @@
 // Include the required Wire library for I2C<br>#include <Wire.h>
 int x = 0;
 
-void receiveEvent(int bytes) {
-  x = Wire.read();    // read one character from the I2C
-  Serial.println(x);
-}
+void receiveEvent(int bytes);
 
 void setup() {
   // Start the I2C Bus as Slave on address 9
@@ -17,6 +14,11 @@ void setup() {
   Wire.onReceive(receiveEvent);
 }
 
+void receiveEvent(int bytes) {
+  x = Wire.read();    // read one character from the I2C
+}
+
 void loop() {
-  Wire.onReceive(receiveEvent);
+  Serial.println(x);
+  delay(500);
 }
